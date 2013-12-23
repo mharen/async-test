@@ -17,7 +17,7 @@ namespace AsyncDataTest.Controllers
             _connectionString = ConfigurationManager.ConnectionStrings["Sql"].ConnectionString;
         }
 
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
 
             // do some data access
@@ -27,7 +27,7 @@ namespace AsyncDataTest.Controllers
             {
                 command.CommandText = _commandText;
                 connection.Open();
-                result = (DateTime) await command.ExecuteScalarAsync();
+                result = (DateTime) command.ExecuteScalar();
             }
 
             return View("Index", result);

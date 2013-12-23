@@ -7,12 +7,18 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Test</title>
-    </head>
-    <body>
-        <div>
-              @Model
-        </div>
-    </body>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <div>
+        @Model
+    </div>
+    <div>
+        <ul>
+            <li>@Html.ActionLink("Simple synchronous data access", "Index")</li>
+            <li>@Html.ActionLink("Simple asynchronous data access", "IndexAsync")</li>
+        </ul>
+    </div>
+</body>
 </html>
