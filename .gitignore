@@ -1,0 +1,8 @@
+PublishProfiles/
+bin/
+packages/
+obj/
+*.suo
+
+
+
